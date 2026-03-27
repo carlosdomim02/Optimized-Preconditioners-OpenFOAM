@@ -54,9 +54,17 @@ Dentro de estos “logs” proporcionados por OpenFOAM (visibles en [`análisis 
 
 Con el resumen proporcionado con las gráficas no solo se proporciona información sobre cómo se va acercando el sistema a la convergencia, sino que puede ser de gran ayuda para ver otros detalles como la evolución en cuanto a número de iteraciones necesarias para converger.
 
+### Extracción de los Preconditioners
+
+Es posible que el análisis realizado en el paso anterior este considerando otros cálculos que se hacen dentro de la aplicación, de manera que sería interesante estudiar el problema de forma aislada. Con esto, se extrae todo lo necesario para poder ejecutar los Preconditioners estudiados fuera de OpenFOAM, lo cual se recoge en [``]().
+
+Esta extracción no solo incluye los algoritmos que realizan las operaciones de acondicionamiento de la matriz, sino que debe obtenerse una o varias matrices que representen un sistema de ecuaciones real. Como se ha mencionado con anterioridad, se toman estos datos del tutorial “motorBike” de OpenFOAM. En concreto, se rescata la matriz que representa la solución actual en varios puntos de la simulación, evitando errores en los análisis debidos a casos puntuales.
+
+En resumen, se extrae todo lo necesario para completar los siguientes pasos fuera de la aplicación OpenFOAM. Desde los algoritmos que deseamos optimizar (el Diagonal Preconditioner y el DIC Preconditioner), hasta los datos de entrada que representan un caso realista.
+
 ### Condition Number
 
-### Preconditioners
+Una vez
 
 ### Paralelización CPU
 
