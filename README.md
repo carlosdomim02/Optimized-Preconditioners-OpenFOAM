@@ -64,7 +64,16 @@ En resumen, se extrae todo lo necesario para completar los siguientes pasos fuer
 
 ### Condition Number
 
-Una vez
+En este punto se cuenta con varias matrices que actúan como entrada para los Preconditioners, las cuales pueden ser analizadas desde el punto de vista de la cercanía a la convergencia. Esto representaría el caso de estudio donde aún no se ha aplicado ninguna operación intermedia.
+
+Además, ya se poseen los algoritmos capaces de generar la matriz que representa el sistema tras aplicar cada uno de los Preconditioners sobre los ejemplos originales. De esta manera, es posible conocer la cercanía a la convergencia antes y después de la aplicación de los distintos Preconditioners estudiados.
+
+Por todo ello, es el punto ideal para construir o adaptar una herramienta capaz de calcular el resumen de convergencia ofrecido por el Condition Number sobre los ejemplos objeto de análisis.
+
+Esta herramienta o conjunto de herramientas se centra en el cálculo del Condition Number (CN), un método matemático que permite aproximar cómo de cerca se 
+encuentra la matriz que representa el sistema actual de converger. El Condition Number, o número de condición en español, tiene como objetivo medir la sensibilidad a pequeñas perturbaciones en los datos de entrada de la matriz, así como a los errores de redondeo que ocurren durante el proceso de solución. Por lo general, un Condition Number no solo se aplica a una matriz en particular, sino también al problema que se está resolviendo. Es posible que una matriz pueda estar mal condicionada para el cálculo de su inversa, mientras que el problema de encontrar sus valores propios está bien condicionado, o viceversa. [18]
+
+En el caso de esta investigación, se usa el CN para comprobar como de bien condicionado está el sistema actual antes y después de aplicar un Preconditioner. En otras palabras, se obtiene un número que resume cómo de cerca está la solución actual de converger antes y después de aplicar la supuesta mejora causada por los Preconditioners estudiados. En concreto, se
 
 ### Paralelización CPU
 
