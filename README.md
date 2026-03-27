@@ -28,8 +28,17 @@ Para ello, se ha escogido un método rápido y sencillo, el Diagonal Preconditio
 
 ## Objetivos
 
+Este proyecto busca esencialmente resolver dos hitos. En primer lugar, medir empíricamente la efectividad de la operación conocida como Preconditioner en la resolución de sistemas de ecuaciones mediante métodos iterativos. Para lograrlo, se pretende usar la herramienta matemática conocida como Condition Number, la cual es capaz de resumir lo cerca que se halla la solución actual de la convergencia antes y después de aplicar dicha operación.
+
+En segundo lugar, se busca acelerar la operación mencionada con anterioridad a través de la paralelización. Concretamente, se busca realizar estas pruebas sobre dos tipos de Preconditioners: uno más sencillo, rápido y fácil de paralelizar y otro más complejo y difícil de paralelizar, pero con mejores resultados probados matemáticamente.
+
+Esto permite analizar y comparar distintas soluciones para un mismo problema, teniendo así un enfoque más sencillo, pero que podría ser aplicado varias veces para conseguir los resultados de un sistema más complejo en el caso del Diagonal Preconditioner (opción sencilla). Por otro lado, se analiza un enfoque de mejora de una herramienta compleja, pero con buenos resultados, el Diagonal-based Incomplete Cholesky (DIC) Preconditioner (opción costosa).
+
+De esta forma, la idea principal resulta en el estudio de la mejora que provocan los Preconditioners sobre un sistema de gran tamaño, como los usados en simulaciones CFD. Además, se pretende acelerar y comparar las mejoras proporcionadas por dos tipos de Preconditioners, de forma que se pueda razonar cuál sería la operación más adecuada según el problema que deseemos enfrentar.
 
 ## Desarrollo del Proyecto
+
+A continuación se comentan los detalles del desarrollo del proyecto recogido en este repositorio, con objeto de comprender mejor todos aquellos ficheros aquí almacenados que componen el análisis definido en las secciones previas.
 
 ### Análisis de Residuos
 
