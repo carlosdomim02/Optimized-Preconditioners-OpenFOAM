@@ -56,7 +56,7 @@ Con el resumen proporcionado con las gráficas no solo se proporciona informaci�
 
 ### Extracción de los Preconditioners
 
-Es posible que el análisis realizado en el paso anterior este considerando otros cálculos que se hacen dentro de la aplicación, de manera que sería interesante estudiar el problema de forma aislada. Con esto, se extrae todo lo necesario para poder ejecutar los Preconditioners estudiados fuera de OpenFOAM, lo cual se recoge en [``]().
+Es posible que el análisis realizado en el paso anterior este considerando otros cálculos que se hacen dentro de la aplicación, de manera que sería interesante estudiar el problema de forma aislada. Con esto, se extrae todo lo necesario para poder ejecutar los Preconditioners estudiados fuera de OpenFOAM, lo cual se recoge en [`Original Preconditioners`](https://github.com/carlosdomim02/Optimized-Preconditioners-OpenFOAM/tree/main/Original%20Preconditioners).
 
 Esta extracción no solo incluye los algoritmos que realizan las operaciones de acondicionamiento de la matriz, sino que debe obtenerse una o varias matrices que representen un sistema de ecuaciones real. Como se ha mencionado con anterioridad, se toman estos datos del tutorial “motorBike” de OpenFOAM. En concreto, se rescata la matriz que representa la solución actual en varios puntos de la simulación, evitando errores en los análisis debidos a casos puntuales.
 
