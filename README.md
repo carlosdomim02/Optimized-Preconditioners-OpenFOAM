@@ -38,9 +38,21 @@ De esta forma, la idea principal resulta en el estudio de la mejora que provocan
 
 ## Desarrollo del Proyecto
 
-A continuación se comentan los detalles del desarrollo del proyecto recogido en este repositorio, con objeto de comprender mejor todos aquellos ficheros aquí almacenados que componen el análisis definido en las secciones previas.
+A continuación se comentan los detalles del desarrollo del proyecto recogido en este repositorio, con objeto de comprender mejor todos aquellos ficheros aquí almacenados que componen el análisis definido en las secciones previas. 
+
+Para el análisis realizado a lo largo de este proyecto se escoge un tutorial de OpenFOAM como caso de pruebas, el cual consiste en un sistema de ecuaciones de un caso real, de forma que los resultados obtenidos sean datos realistas de lo que podría suceder en una aplicación real. Concretamente se ha buscado una matriz que represente un sistema de un tamaño considerable en aplicaciones CFD, ya que serán las principales beneficiarias de este estudio. En concreto, en los próximos pasos se usará como matriz de entrada aquella que representa el tutorial “motorBike” de OpenFOAM: [22]
+
+<img width="681" height="422" alt="image" src="https://github.com/user-attachments/assets/eee17c5c-ef5c-4cdf-9e8a-5a9c135f6be1" />
+
+Dicho tutorial es un caso sencillo, pero realista que realiza la simulación de la aerodinámica de una moto. Con esto se obtiene una matriz de dimensiones aproximadas de 300K x 300K elementos. Aunque es posible que haya ejemplos más grandes en problemas reales, este caso resultará lo suficientemente grande para estudiar la eficacia y paralelización de los Preconditioners.
 
 ### Análisis de Residuos
+
+En primer lugar, se comienza con la ejecución del caso de pruebas con objeto de medir la supuesta mejora que ofrecen los Preconditioners. Esto permite ver el efecto que refleja su uso en una aplicación real gracias a la información de los “logs” de OpenFOAM. En concreto, se ejecutó la simulación configurando el uso de cada uno de los Preconditioners estudiados. Además, se incluyó una ejecución doble del Diagonal Preconditioner, así como otra ejecución sin ninguna de estas operaciones.
+
+Dentro de estos “logs” proporcionados por OpenFOAM (visibles en [``]()), destacan medidas como los residuos o el número de iteraciones hasta converger. Los residuos o residual es una medida del desequilibrio o error en las ecuaciones de conservación y se define como la diferencia entre el valor de cierta variable con respecto a esa misma variable obtenida en la iteración anterior [23]. De esta forma, se aplica una técnica muy extendida a la hora de monitorizar este tipo de simulaciones, construir gráficas que permitan analizar dichos residuos u otras medidas de una forma más visual, las cuales se aprecian en [``](). 
+
+Con el resumen proporcionado con las gráficas no solo se proporciona información sobre cómo se va acercando el sistema a la convergencia, sino que puede ser de gran ayuda para ver otros detalles como la evolución en cuanto a número de iteraciones necesarias para converger.
 
 ### Condition Number
 
