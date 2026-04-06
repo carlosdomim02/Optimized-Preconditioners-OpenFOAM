@@ -1,0 +1,35 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include"     --keep-dir x64\Release  -maxrregcount=0   --machine 64 --compile -cudart static    -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /FS   /MD " -Xcompiler "/Fdx64\Release\vc142.pdb" -o "C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\x64\Release\kernel.cu.obj" "C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\kernel.cu" 
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\kernel.cu(539): warning #2464-D: conversion from a string literal to "char *" is deprecated
+        binaryRead("./matrixBefore.bin", &sizes, &diag, &upperAddr, &lowerAddr, &upper, &lower, &initialResidual, &psi, &ownerStartAddr);
+                   ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\kernel.cu(539): warning #2464-D: conversion from a string literal to "char *" is deprecated
+        binaryRead("./matrixBefore.bin", &sizes, &diag, &upperAddr, &lowerAddr, &upper, &lower, &initialResidual, &psi, &ownerStartAddr);
+                   ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\kernel.cu(502): warning #177-D: variable "reciprocalDiagPtr" was declared but never referenced
+        double* reciprocalDiagPtr;
+                ^
+  
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\kernel.cu(583): warning #177-D: variable "blocksPerGrid" was declared but never referenced
+        int blocksPerGrid = (sizes[0] + threadsPerBlock - 1) / threadsPerBlock;
+            ^
+  
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\kernel.cu(584): warning #177-D: variable "blocksPerKernel" was declared but never referenced
+        int blocksPerKernel;
+            ^
+  
+  kernel.cu
+  tmpxft_00007280_00000000-7_kernel.cudafe1.cpp
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\kernel.cu(502): warning C4101: 'reciprocalDiagPtr': variable local sin referencia
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\kernel.cu(584): warning C4101: 'blocksPerKernel': variable local sin referencia
+     Creando biblioteca C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\x64\Release\DIC_Preconditioner_CuDa.lib y objeto C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\x64\Release\DIC_Preconditioner_CuDa.exp
+LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+  LINK : se especificó /LTCG pero no se requiere generación de código; quite /LTCG de la línea de comandos de vínculo para mejorar el rendimiento del vinculador
+  DIC_Preconditioner_CuDa.vcxproj -> C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CuDa\x64\Release\DIC_Preconditioner_CuDa.exe
