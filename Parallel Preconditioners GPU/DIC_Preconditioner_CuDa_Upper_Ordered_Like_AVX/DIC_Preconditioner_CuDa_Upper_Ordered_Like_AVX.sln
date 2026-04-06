@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35706.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DIC_Preconditioner_CuDa_Upper_Ordered_Like_AVX", "DIC_Preconditioner_CuDa_Upper_Ordered_Like_AVX.vcxproj", "{17C92517-E673-4BEF-A408-D5FE2B6A14DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17C92517-E673-4BEF-A408-D5FE2B6A14DB}.Debug|x64.ActiveCfg = Debug|x64
+		{17C92517-E673-4BEF-A408-D5FE2B6A14DB}.Debug|x64.Build.0 = Debug|x64
+		{17C92517-E673-4BEF-A408-D5FE2B6A14DB}.Release|x64.ActiveCfg = Release|x64
+		{17C92517-E673-4BEF-A408-D5FE2B6A14DB}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1E90210-305E-4A3F-91BD-7002BCE06228}
+	EndGlobalSection
+EndGlobal
