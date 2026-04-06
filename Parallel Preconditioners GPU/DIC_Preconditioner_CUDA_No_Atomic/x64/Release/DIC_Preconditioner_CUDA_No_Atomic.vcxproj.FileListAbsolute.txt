@@ -1,0 +1,1 @@
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_CUDA_No_Atomic\x64\Release\DIC_Preconditioner_CUDA_No_Atomic.exe

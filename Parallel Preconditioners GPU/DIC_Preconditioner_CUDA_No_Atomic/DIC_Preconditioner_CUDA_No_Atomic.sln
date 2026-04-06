@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35731.53
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DIC_Preconditioner_CUDA_No_Atomic", "DIC_Preconditioner_CUDA_No_Atomic.vcxproj", "{1E4970B6-CEB0-4F19-8A3B-BEC03762E233}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E4970B6-CEB0-4F19-8A3B-BEC03762E233}.Debug|x64.ActiveCfg = Debug|x64
+		{1E4970B6-CEB0-4F19-8A3B-BEC03762E233}.Debug|x64.Build.0 = Debug|x64
+		{1E4970B6-CEB0-4F19-8A3B-BEC03762E233}.Release|x64.ActiveCfg = Release|x64
+		{1E4970B6-CEB0-4F19-8A3B-BEC03762E233}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADB69581-5FDF-4DC4-B4BA-B2F701FDE8D8}
+	EndGlobalSection
+EndGlobal
