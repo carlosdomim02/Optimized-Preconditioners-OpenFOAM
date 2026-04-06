@@ -1,1 +1,0 @@
-(*reciprocalDiagPtr)[lowerAddr[face]];
