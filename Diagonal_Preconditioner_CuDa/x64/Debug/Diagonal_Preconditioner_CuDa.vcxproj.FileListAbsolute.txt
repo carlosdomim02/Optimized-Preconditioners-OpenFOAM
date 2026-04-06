@@ -1,1 +1,0 @@
-C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\Diagonal_Preconditioner_CuDa\x64\Debug\Diagonal_Preconditioner_CuDa.exe
