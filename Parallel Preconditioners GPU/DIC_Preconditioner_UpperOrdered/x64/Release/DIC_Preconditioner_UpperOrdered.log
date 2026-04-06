@@ -1,0 +1,26 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6\include"     --keep-dir x64\Release  -maxrregcount=0   --machine 64 --compile -cudart static    -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /FS   /MD " -Xcompiler "/Fdx64\Release\vc142.pdb" -o "C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered\x64\Release\kernel.cu.obj" "C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered\kernel.cu" 
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered\kernel.cu(571): warning #2464-D: conversion from a string literal to "char *" is deprecated
+        binaryRead("./matrixBeforeLong.bin", &sizes, &diag, &upperAddr, &lowerAddr, &upper, &lower, &initialResidual, &psi, &ownerStartAddr, &losortAddr, &losortStartAddr);
+                   ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered\kernel.cu(240): warning #177-D: variable "sortedIndex" was declared but never referenced
+        int sortedIndex;
+            ^
+  
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+  
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered\kernel.cu(571): warning #2464-D: conversion from a string literal to "char *" is deprecated
+        binaryRead("./matrixBeforeLong.bin", &sizes, &diag, &upperAddr, &lowerAddr, &upper, &lower, &initialResidual, &psi, &ownerStartAddr, &losortAddr, &losortStartAddr);
+                   ^
+  
+  kernel.cu
+  tmpxft_00005948_00000000-7_kernel.cudafe1.cpp
+C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered\kernel.cu(240): warning C4101: 'sortedIndex': variable local sin referencia
+     Creando biblioteca C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered\x64\Release\DIC_Preconditioner_UpperOrdered.lib y objeto C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered\x64\Release\DIC_Preconditioner_UpperOrdered.exp
+LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+  LINK : se especificó /LTCG pero no se requiere generación de código; quite /LTCG de la línea de comandos de vínculo para mejorar el rendimiento del vinculador
+  DIC_Preconditioner_UpperOrdered.vcxproj -> C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_UpperOrdered\x64\Release\DIC_Preconditioner_UpperOrdered.exe
