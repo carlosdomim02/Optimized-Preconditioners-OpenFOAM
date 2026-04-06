@@ -73,9 +73,13 @@ Por todo ello, es el punto ideal para construir o adaptar una herramienta capaz 
 Esta herramienta o conjunto de herramientas se centra en el cálculo del Condition Number (CN), un método matemático que permite aproximar cómo de cerca se 
 encuentra la matriz que representa el sistema actual de converger. El Condition Number, o número de condición en español, tiene como objetivo medir la sensibilidad a pequeñas perturbaciones en los datos de entrada de la matriz, así como a los errores de redondeo que ocurren durante el proceso de solución. Por lo general, un Condition Number no solo se aplica a una matriz en particular, sino también al problema que se está resolviendo. Es posible que una matriz pueda estar mal condicionada para el cálculo de su inversa, mientras que el problema de encontrar sus valores propios está bien condicionado, o viceversa. [18]
 
-En el caso de esta investigación, se usa el CN para comprobar como de bien condicionado está el sistema actual antes y después de aplicar un Preconditioner. En otras palabras, se obtiene un número que resume cómo de cerca está la solución actual de converger antes y después de aplicar la supuesta mejora causada por los Preconditioners estudiados. En concreto, se
+En el caso de esta investigación, se usa el CN para comprobar como de bien condicionado está el sistema actual antes y después de aplicar un Preconditioner. En otras palabras, se obtiene un número que resume cómo de cerca está la solución actual de converger antes y después de aplicar la supuesta mejora causada por los Preconditioners estudiados. 
+
+En concreto, se crea el script [`ConditionNumberFrombin.m`]() de MatLab, capaz de calcular el CN para una matriz dada, la cual debe seguir un formato específico que se consigue tras la aplicación de los scripts [`MatrixConverter.py`]() y [`MatrixToCondNumFormat.py`]() de Python (en este mismo orden). Estos scripts buscan separar el estado actual de las variables en el proceso de resolución (OpenFOAM almacena estos valores combinados con la matriz) de las matrices rescatadas de OpenFOAM para realizar las pruebas, así como adaptar estos datos para ser fácilmente legibles por un script MatLab (adaptar el formato de almacenamiento de OpenFOAM a ficheros binarios fácilmente legibles por MatLab).
 
 ### Paralelización CPU
+
+
 
 ### Paralelización GPU
 
