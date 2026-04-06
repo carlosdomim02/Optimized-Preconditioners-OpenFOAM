@@ -1,1 +1,0 @@
-C:\Users\USUARIO\Desktop\Clase\Cuarto curso\TFG OpenFoam\DIC_Preconditioner_Cells_Ordered\x64\Release\DIC_Preconditioner_Cells_Ordered.exe
