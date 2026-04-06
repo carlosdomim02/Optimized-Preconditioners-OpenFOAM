@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36107.64
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DIC_Preconditioner_LoSort_SharedMemory", "DIC_Preconditioner_LoSort_SharedMemory.vcxproj", "{55D32844-767D-421F-85FD-3DD090628D68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55D32844-767D-421F-85FD-3DD090628D68}.Debug|x64.ActiveCfg = Debug|x64
+		{55D32844-767D-421F-85FD-3DD090628D68}.Debug|x64.Build.0 = Debug|x64
+		{55D32844-767D-421F-85FD-3DD090628D68}.Release|x64.ActiveCfg = Release|x64
+		{55D32844-767D-421F-85FD-3DD090628D68}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA59E14B-EFF7-4094-963A-C7813BE7A50B}
+	EndGlobalSection
+EndGlobal
