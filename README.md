@@ -132,8 +132,18 @@ Por último, se ve un resumen de las mejoras obtenidas con las distintas configu
 
 <img width="693" height="171" alt="image" src="https://github.com/user-attachments/assets/31f7ed92-9273-4afc-8543-bea112cf2dcb" />
 
-
 ### Paralelización GPU:
 
+De igual forma que en el apartado previo, se estudian las mejoras obtenidas mediante la paralelización en GPU (a través de CUDA) de los Preconditioners optimizados. En cambio, ahora se analizan dos tipos de mejoras por separado, las cuales se basan en la gráfica utilizada para cada conjunto de pruebas. Nuevamente, se da comienzo por las versiones de Diagonal Preconditioner: 
+
+<img width="1223" height="470" alt="image" src="https://github.com/user-attachments/assets/1db97b82-3f78-4345-9752-08ba1f884560" />
+
+Por otro lado, se muestran los resultados de la paralelización CUDA de las distintas versiones de DIC Preconditioner (mismo formato, pero con más versiones): 
+
+<img width="765" height="937" alt="image" src="https://github.com/user-attachments/assets/7c6eb494-0ace-4ae6-bc4a-7add24966bcc" />
+
+Por último, se ve un resumen de las mejoras obtenidas con las distintas configuraciones de ambos Preconditioners, es decir, se presenta un resumen de los speedups dados por los distintos algoritmos paralelos en CUDA, junto al número de hilos por bloque que produjeron tal resultado: 
+
+<img width="1103" height="308" alt="image" src="https://github.com/user-attachments/assets/2d3caceb-af4d-4dfa-b319-be770e29e8dc" />
 
 ## Conclusiones
