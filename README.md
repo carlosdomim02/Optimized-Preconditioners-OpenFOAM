@@ -89,6 +89,18 @@ Para implementar las distintas versiones paralelas de los Preconditioners (estas
 
 ### Paralelización GPU
 
+Tras concluir el paso anterior se nota que la paralelización es un buen camino a la hora de intentar mejorar el rendimiento de los Preconditioners. De esta forma, se opta por probar los resultados ofrecidos mediante la paralelización con GPU, la cual obtiene grandes mejoras en el rendimiento mediante una paralelización masiva de operaciones sencillas, lo cual encaja a la perfección con la problemática a resolver. 
+
+<img width="846" height="514" alt="image" src="https://github.com/user-attachments/assets/d13b9cd2-88c8-4cc8-b49b-6611c9f5cfe4" />
+
+A diferencia de los procesadores multinúcleo, las unidades de procesamiento gráfico cuentan con miles de núcleos más pequeños que pueden ejecutar tareas sencillas de forma independiente, lo que las hace ideales para cargas de trabajo paralelas. De esta forma, las CPUs se centran en la precisión y el orden, mientras que las GPUs son ideales aplicar operaciones sencillas sobre cantidades masivas de datos en paralelo.
+
+Aunque la función principal de las GPU sigue girando en torno a los gráficos y los elementos visuales cada vez más realistas, las GPUs se han convertido en procesadores paralelos de uso más general capaces de ejecutar muchas tareas de forma simultánea para manejar una variedad cada vez mayor de aplicaciones. 
+
+Es en esta última faceta es donde se sacó provecho de dicho elemento para paralelizar los Preconditioners estudiados, cuyas distintas versiones se observan en [`Parallel Preconditioners GPU`](https://github.com/carlosdomim02/Optimized-Preconditioners-OpenFOAM/tree/main/Parallel%20Preconditioners%20GPU) . Concretamente se ha usado el kit de herramientas CUDA de las tarjetas gráficas NVIDIA. Para poner a pruebas estos algoritmos paralelos se usaron dos entornos de pruebas diferentes:
+  - La GPU NVIDIA GeForce GTX 1650 with Max-Q Design del dispositivo Windows local ejecutada a través de Visual Studio 2019 junto al paquete CUDA 12.6 y las opciones de compilación release.
+  - La GPU NVIDIA GeForce RTX 3090 integrada en un servidor (contenedor Docker) Ubuntu 22.04.5 LTS administrada mediante PyTorch. Su uso se realizó mediante la compilación con NVCC CUDA 12.1 con la opción -O2 que ofrece características de release.
+
 ## Resultados 
 
 ## Conclusiones
