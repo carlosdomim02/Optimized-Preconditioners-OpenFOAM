@@ -103,4 +103,37 @@ Es en esta última faceta es donde se sacó provecho de dicho elemento para para
 
 ## Resultados 
 
+### Estudio de la Convergencia
+
+En primer lugar, se visualizan dos gráficas obtenidas a partir de análisis de los residuos obtenidos directamente de la ejecución de los distintos Preconditioners sobre el tutorial “motorBike” de OpenFOAM. Una de ellas compara el número de iteraciones necesarias para converger en cada resolución de matrices (ejecución de PCG) efectuada por el algoritmo de resolución concido como “simpleFoam”:
+<img width="1224" height="449" alt="image" src="https://github.com/user-attachments/assets/137d22eb-73ab-4c63-ac66-96367abd0dfb" />
+
+Mientras la otra representa el tiempo de ejecución total (del algoritmo “simpleFoam”) para cada uno de los Preconditioners: 
+
+<img width="1144" height="446" alt="image" src="https://github.com/user-attachments/assets/4835fa74-79a7-4c6d-b04f-73862570a2ee" />
+
+Por otro lado, se aprecia una comparativa de los Condition Numbers obtenidos de forma previa a la ejecución de ningún Preconditioner y tras cada uno de los Preconditioners estudiados (incluyendo una doble y triple ejecución del Diagonal): 
+
+<img width="1441" height="633" alt="image" src="https://github.com/user-attachments/assets/8d0785ad-c712-4f34-9e98-7f9f6ea4748d" />
+
+Esta comparativa se hace por cada una de las matrices extraídas que anteriormente se describieron, las cuales se encuentran en [`Condition Number`](https://github.com/carlosdomim02/Optimized-Preconditioners-OpenFOAM/tree/main/Condition%20Number). 
+
+### Paralelización CPU:
+
+En esta sección se aprecian las mejoras surgidas tras la paralelización en CPU (mediante OMP) de los distintos Preconditioners estudiados. Estos resultados son independientes de la matriz de entrada usada, por tanto, se usa cualquiera de ellas (aunque siempre la misma). Empezando por los resultados de optimizar el Diagonal Preconditioner se obtiene un gráfico que indica cuánto mejora el Diagonal Preconditioner por cantidad de hilos usados respecto de la versión secuencial: 
+
+<img width="701" height="268" alt="image" src="https://github.com/user-attachments/assets/372215a8-9e3d-441a-944c-32255113eaee" />
+
+Por otro lado, se aprecia la siguiente mejora con las diferentes versiones paralelas de DIC Preconditioner (mismo formato, pero con más versiones): 
+
+<img width="853" height="379" alt="image" src="https://github.com/user-attachments/assets/713a4880-4bcd-4dac-a985-a5ff3aacd4ff" />
+
+Por último, se ve un resumen de las mejoras obtenidas con las distintas configuraciones de ambos Preconditioners, donde se muestran únicamente los mejores speedups obtenidos por cada versión de los Preconditioners, junto al número de hilos que dieron dicho tiempo: 
+
+<img width="693" height="171" alt="image" src="https://github.com/user-attachments/assets/31f7ed92-9273-4afc-8543-bea112cf2dcb" />
+
+
+### Paralelización GPU:
+
+
 ## Conclusiones
