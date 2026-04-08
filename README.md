@@ -79,7 +79,11 @@ En concreto, se crea el script [`ConditionNumberFrombin.m`](https://github.com/c
 
 ### Paralelización CPU
 
+El proceso de aceleración de los Preconditioners extraídos de la aplicación OpenFOAM comenzó con el enfoque más sencillo, la paralelización a nivel CPU. Al fin y al cabo, este tipo de paralelización no supone una curva de aprendizaje demasiado agresiva para aquellos que ya conocen la programación y computación clásicas. 
 
+En concreto la aceleración realizada se centra en el uso de multiprocesadores o procesadores multinúcleo de memoria compartida. Estos dispositivos pueden dividir el trabajo en varios procesadores (núcleos), de forma que se elija en cada momento que datos serán compartidos y cuales no a pesar de usar la misma memoria principal todos ellos. Usando también instrucciones vectoriales (AVX), las cuales ejecutan una misma instrucción sobre varios datos de forma simultánea sin ninguna sobrecarga extra.
+
+Para implementar las distintas versiones paralelas de los Preconditioners (estas versiones se pueden visualizar en [`Parallel Preconditioners CPU`](https://github.com/carlosdomim02/Optimized-Preconditioners-OpenFOAM/tree/main/Parallel%20Preconditioners%20CPU)) se ha usado la herramienta OpenMP, ya que ofrece a los programadores de memoria compartida una herramienta para crear aplicaciones paralelas en diversas plataformas. Así como una máquina Ubuntu 22.04.5 LTS sobre un procesador AMD Ryzen Threadripper 2990WX 32 Core Processor con 32 núcleos y hasta 64 hilos como entorno de pruebas.
 
 ### Paralelización GPU
 
